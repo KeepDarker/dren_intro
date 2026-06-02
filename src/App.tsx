@@ -1402,25 +1402,25 @@ export default function App() {
           zIndex: 9,
         }}
       />
-      {[
-        [{ top: 28, left: 28 }, '1px 0 0 1px'],
-        [{ top: 28, right: 28 }, '1px 1px 0 0'],
-        [{ bottom: 28, left: 28 }, '0 0 1px 1px'],
-        [{ bottom: 28, right: 28 }, '0 1px 1px 0'],
-      ].map(([pos, bw], i) => (
-        <div
-          key={i}
-          style={{
-            position: 'absolute',
-            ...pos,
-            width: 20,
-            height: 20,
-            borderStyle: 'solid',
-            borderColor: 'rgba(140,170,200,0.13)',
-            borderWidth: bw,
-            pointerEvents: 'none',
-          }}
-        />
+      {([
+  [{ top: 28, left: 28 }, '1px 0 0 1px'],
+  [{ top: 28, right: 28 }, '1px 1px 0 0'],
+  [{ bottom: 28, left: 28 }, '0 0 1px 1px'],
+  [{ bottom: 28, right: 28 }, '0 1px 1px 0'],
+] as [React.CSSProperties, string][]).map(([pos, bw], i) => (
+  <div
+    key={i}
+    style={{
+      position: 'absolute',
+      ...pos,
+      width: 20,
+      height: 20,
+      borderStyle: 'solid',
+      borderColor: 'rgba(140,170,200,0.13)',
+      borderWidth: bw,
+      pointerEvents: 'none',
+    }}
+  />
       ))}
       <div
         style={{
@@ -1527,30 +1527,12 @@ export default function App() {
               transition: 'opacity 1s 1.5s',
             }}
           >
-            <button
-              onClick={replay}
-              style={{
-                background: 'transparent',
-                border: '1px solid rgba(140,170,200,0.15)',
-                color: 'rgba(140,170,200,0.3)',
-                fontFamily: "'Share Tech Mono',monospace",
-                fontSize: '9px',
-                letterSpacing: '0.25em',
-                padding: '8px 20px',
-                cursor: 'pointer',
-                transition: 'all 0.2s',
-              }}
-              onMouseEnter={(e) => {
-                e.target.style.color = 'rgba(140,170,200,0.6)';
-                e.target.style.borderColor = 'rgba(140,170,200,0.4)';
-              }}
-              onMouseLeave={(e) => {
-                e.target.style.color = 'rgba(140,170,200,0.3)';
-                e.target.style.borderColor = 'rgba(140,170,200,0.15)';
-              }}
-            >
-              [ REPLAY ]
-            </button>
+            <button onClick={replay}
+  style={{ background: "transparent", border: "1px solid rgba(140,170,200,0.15)", color: "rgba(140,170,200,0.3)", fontFamily: "'Share Tech Mono',monospace", fontSize: "9px", letterSpacing: "0.25em", padding: "8px 20px", cursor: "pointer", transition: "all 0.2s" }}
+  onMouseEnter={e => { (e.target as HTMLElement).style.color = "rgba(140,170,200,0.6)"; (e.target as HTMLElement).style.borderColor = "rgba(140,170,200,0.4)"; }}
+  onMouseLeave={e => { (e.target as HTMLElement).style.color = "rgba(140,170,200,0.3)"; (e.target as HTMLElement).style.borderColor = "rgba(140,170,200,0.15)"; }}>
+  [ REPLAY ]
+</button>
           </div>
         )}
       </div>
