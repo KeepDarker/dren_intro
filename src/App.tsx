@@ -34,7 +34,7 @@ const GUARD_SCRIPT = {
 // ── 오디오 ────────────────────────────────────────────────────────────────────
 let _ctx = null;
 function getCtx() {
-  if (!_ctx) _ctx = new (window.AudioContext || window.webkitAudioContext)();
+  if (!_ctx) _ctx = new (window.AudioContext || (window as any).webkitAudioContext)();
   if (_ctx.state === 'suspended') _ctx.resume();
   return _ctx;
 }
@@ -1364,7 +1364,7 @@ export default function App() {
     }, 700);
   };
 
-  const sp = (idx) => ({
+  const sp = (idx: number): any => ({
     active: scene === idx && !fade,
     onDone: () => setTimeout(() => transitionTo(idx + 1), 700),
     setSub,
@@ -1494,13 +1494,13 @@ export default function App() {
               }}
               onMouseEnter={(e) => {
                 if (!loading) {
-                  e.target.style.borderColor = 'rgba(140,170,200,0.5)';
-                  e.target.style.color = 'rgba(140,170,200,0.9)';
+                  (e.target as HTMLElement).style.borderColor = 'rgba(140,170,200,0.5)';
+                  (e.target as HTMLElement).style.borderColor = 'rgba(140,170,200,0.9)';
                 }
               }}
               onMouseLeave={(e) => {
-                e.target.style.borderColor = 'rgba(140,170,200,0.2)';
-                e.target.style.color = 'rgba(140,170,200,0.5)';
+                (e.target as HTMLElement).style.borderColor = 'rgba(140,170,200,0.2)';
+                (e.target as HTMLElement).style.borderColor = 'rgba(140,170,200,0.5)';
               }}
             >
               {loading ? '[ LOADING... ]' : '[ INITIATE PLAYBACK ]'}
