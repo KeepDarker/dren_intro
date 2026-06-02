@@ -8,7 +8,7 @@ const RADIO_URL =
 const NARRATOR_SCRIPTS = [
   {
     en: "On paper, this individual was incinerated at Korhal's First Military Court three years ago. His name, his service record, even his medals — all erased from Dominion history.",
-    ko: '기록상으로, 이 인간은 3년 전 코랄 제1군사법원에서 소각 처리되었습니다.\n이름도, 군적도, 그가 세운 훈장 기록도 전부 자치령 역사에서 지워졌죠.',
+    ko: '기록상으로, 이 테란은 3년 전 코랄 제1군사법원에서 소각 처리되었습니다.\n이름도, 군적도, 그가 세운 훈장 기록도 전부 자치령 역사에서 지워졌죠.',
   },
   {
     en: "But the Dominion doesn't let the dead rest. Project ANATHEMA. A test subject for synthetic psionic agent development using terrazine and jorium. That was the real punishment hidden behind the expunged data.",
