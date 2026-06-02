@@ -16,7 +16,7 @@ const NARRATOR_SCRIPTS = [
   },
   {
     en: 'Late 2502. Iron Cradle Station decommissioned. The Dominion attempted to purge the failures in a single nuclear strike, burying the survivors in the deepest abyss of New Folsom. The system deemed it a closed case. ...Until now.',
-    ko: '2502년 말, 아이언 크래들 스테이션 파기.\n자치령은 실패작들을 핵폭격으로 인멸하려 했고,\n생존자들은 뉴 폴섬의 가장 깊은 나락에 매장되었습니다.\n시스템은 완벽하게 끝났다고 판단했습니다. ……지금 이 순간 전까지는.',
+    ko: '2502년 말, 아이언 크래들 스테이션이 파괴되었습니다.\n자치령은 실패작들을 핵폭격으로 인멸하려 했고,\n생존자들은 뉴 폴섬의 가장 깊은 나락에 매장되었습니다.\n시스템은 완벽하게 끝났다고 판단했습니다. ……지금 이 순간 전까지는.',
   },
   {
     en: 'Biomechanical chip control lost. Guilt, ego, all burned away... leaving only monsters driven by pure aggression to dismantle the Dominion regime. And they are led by the most savage alpha of them all.',
